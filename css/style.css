@@ -1,0 +1,16 @@
+/* Ini CSS*/
+
+textarea {
+    resize: none;
+    border-radius: 8px;
+    height: 200;
+    width: 300;
+    font-size: 14;
+}
+
+button {
+    color: black;
+    background-color: orange;
+    font-weight: bold;
+    height: 32px;
+}
