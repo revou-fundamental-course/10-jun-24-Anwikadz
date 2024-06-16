@@ -1,16 +1,70 @@
 /* Ini CSS*/
 
-textarea {
+/*textarea {
     resize: none;
     border-radius: 8px;
     height: 200;
     width: 300;
     font-size: 14;
+} */
+ 
+header {
+    
+}
+
+h1 {
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    font-family: arial;
+}
+
+h4{
+    font-size: 24px;
+    color: white;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #1f2430;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 button {
-    color: black;
-    background-color: orange;
-    font-weight: bold;
-    height: 32px;
+    padding: 10px;
+    background-color: #f6b76d;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #242d49;
+    cursor: pointer;
+}
+
+a:hover
+ {
+    color: white;
+    background-color: #606c38;
+ }
+
+p {
+    color: white;
 }
