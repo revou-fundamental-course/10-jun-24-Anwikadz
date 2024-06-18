@@ -3,64 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Konversi Suhu </title>
+    <title>Website Konversi Suhu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--ini heading-->
-    <header>
-        <h1>Website Konversi Suhu</h1>
-    </header>
-
-    <!--main content-->
-    <main>
-        <p>Masukkan suhu derajat selcius (&deg;C) ke kotak di bawah, lalu klik tombol konversi untuk mendapatkan hasil konversi</p>
-
-        <!--Section Celcius-->
-        <section class=>
-            <header>
-                <h4>Celcius (&deg;C)</h4>
-            </header>
-            <input type="number" placeholder="masukkan disini">
-            <section>
-                <button onclick="convert()">konversi</button>
-                <button onclick="reset()">reset</button>
-                <button onclick="reverse()">reverse</button>
-            </section>
-        <!--Section Farenheit-->
-            <header>
-                <h4>Farenheit (&deg;F)</h4>
-            </header>
-           <input type="number">
-        <!--Section Calculate-->
-            <header>
-                <h4> cara kalkulasi  (&deg;F)</h4>
-            </header>
-            <input type="text">
-        </section>
-
-        <!--Section Formula/Info-->
+    <mian>
+        <!--ini header-->
+        <header>
+            <h1>Temperature Conversion</h1>
+        </header>
+        <!--ini main content-->
+        <p>Masukkan suhu derajat selcius (°C) ke kotak di bawah, lalu klik tombol konversi untuk mendapatkan hasil konversi</p>
         <section>
-            <header>
-                <h1>
-                    Cara Konversi Celcius(&deg;C) ke Farenheit (&deg;F)
-                </h1>
-                
-            </header>
-
-            <hr>
-
-            <p>
-                Suhu dalam derajat Farenheit (&deg;F) sama dengan suhu dalam derajat Celcius (&deg;C)
-            </p>
-        
-            <p>
-
-            </p>
+            <!--ini celcius-->
+            <div class="input-row">
+                <section class="input-group">
+                  <input type="number" id="celcius" placeholder="Celcius (°C)">
+             </section>
+            <!--ini farenheit-->
+              <div class="input-row"></div>
+             <section class="input-group">
+                  <input type="number" id="fahrenheit" placeholder="Fahrenheit (°F)">
+            </section>
+            </div>
+            <!--Button Section-->
+            <section>
+                <button onclick="convert()">Convert</button>
+                <button onclick="reverse()">Reverse ⇌</button>
+                <button onclick="reset()">Reset ⟲</button>
+             </section>
         </section>
-
-
+        <!--ini section calculate-->
+        <div class="conversion-info">
+            <h2>How to Calculate</h2>
+            <textarea id="calculation"></textarea>
+            <h2>Cara Konversi Dari Celcius (°F) ke Fahrenheit (°F)</h2>
+            <p>Suhu S dalam derajat Farenheit (°F) sama dengan suhu S dalam derajat Celcius (°C)</p>
+            <p>S(°F) = (S(°C) x 1.8) + 32</p>
+            <p>S(°C) = (S(°F) - 32) / 1.8</p>
+        </div>
     </main>
+
     <script src="js/script.js"></script>
 </body>
 </html>
