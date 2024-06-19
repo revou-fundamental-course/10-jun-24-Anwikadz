@@ -1,22 +1,32 @@
 /*Ini JavaScript*/
 
-const celcius = document.getElementById('celsius').value;
-const fahrenheit = document.getElementById('fahrenheit').value;
-
 // convert button
 function convert() {
-    const celcius = document.getElementById('celsius').value;
-    const fahrenheit = (celcius * 9/5) + 32;
-    document.getElementById('fahrenheit').value = fahrenheit;
-    document.getElementById("calculation").innerHTML = "(" + celcius + "&deg;C × 9/5) + 32 = " + fahrenheit + "&deg;F";
+    var celsius = document.getElementById('celsius').value;
+    var fahrenheit = document.getElementById('fahrenheit').value;
+
+    if (celsius !== "") {
+        fahrenheit = (parseFloat(celsius) * 1.8) + 32;
+        document.getElementById('fahrenheit').value = fahrenheit.toFixed(2);
+        document.getElementById('calculation').innerHTML = "(" + celsius + "&deg;C x 9/5) + 32 = " + fahrenheit + "&deg;F"; 
+    } else if (fahrenheit !== "") {
+        celsius = (parseFloat(fahrenheit) - 32) / 1.8;
+        document.getElementById('celsius').value = celsius.toFixed(2);
+        document.getElementById("calculation").innerHTML = "(" + fahrenheit + "&deg;F - 32) / 1 . 8 = " + celsius + "&deg;C";
+    } else {
+        document.getElementById('calculation').textContent = "Please enter a value to convert.";
+    }
 }
 
 //reverse button
 function reverse() {
-    const fahrenheit = document.getElementById('fahrenheit').value;
-    const celcius = (fahrenheit - 32) * 5/9;
-    document.getElementById('celsius').value = celcius;
-    document.getElementById("calculation").innerHTML = "(" + celcius + "&deg;C × 9/5) + 32 = " + fahrenheit + "&deg;F";
+    var celsiusInput = document.getElementById('celsius');
+    var fahrenheitInput = document.getElementById('fahrenheit');
+
+    // Swap the values
+    var temp = celsiusInput.value;
+    celsiusInput.value = fahrenheitInput.value;
+    fahrenheitInput.value = temp;
 }
 
 //reset button
@@ -25,3 +35,4 @@ function reset() {
     document.getElementById('fahrenheit').value = '';
     document.getElementById("calculation").innerHTML= '';
 }
+
