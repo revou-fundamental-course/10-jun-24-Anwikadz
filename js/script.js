@@ -1,19 +1,27 @@
 /*Ini JavaScript*/
 
+const celcius = document.getElementById('celsius').value;
+const fahrenheit = document.getElementById('fahrenheit').value;
 
+// convert button
 function convert() {
-    const celcius = document.getElementById('celcius').value;
+    const celcius = document.getElementById('celsius').value;
     const fahrenheit = (celcius * 9/5) + 32;
     document.getElementById('fahrenheit').value = fahrenheit;
+    document.getElementById("calculation").innerHTML = "(" + celcius + "&deg;C × 9/5) + 32 = " + fahrenheit + "&deg;F";
 }
 
-function reset() {
-    document.getElementById('celcius').value = '';
-    document.getElementById('fahrenheit').value = '';
-}
-
+//reverse button
 function reverse() {
     const fahrenheit = document.getElementById('fahrenheit').value;
     const celcius = (fahrenheit - 32) * 5/9;
-    document.getElementById('celcius').value = celcius;
+    document.getElementById('celsius').value = celcius;
+    document.getElementById("calculation").innerHTML = "(" + celcius + "&deg;C × 9/5) + 32 = " + fahrenheit + "&deg;F";
+}
+
+//reset button
+function reset() {
+    document.getElementById('celsius').value = '';
+    document.getElementById('fahrenheit').value = '';
+    document.getElementById("calculation").innerHTML= '';
 }
